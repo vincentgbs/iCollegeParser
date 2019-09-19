@@ -11,8 +11,10 @@ then
         then
             ### iCollege bulk download format
             ### regex only tested on mac
-            echo $file | sed -E 's~(^[a-zA-Z]+\/\/[0-9]+-[0-9]+ - )(.+ .+)( - [a-zA-Z]{3} [0-9]{1,2}, [0-9]{4} [0-9]{1,4} [AP]M - [a-zA-Z_]+\.java)$~\2~g' | (read studentName; echo $studentName)
-            echo $file | sed -E 's~(^[a-zA-Z]+\/\/[0-9]+-[0-9]+ - )(.+ .+)( - [a-zA-Z]{3} [0-9]{1,2}, [0-9]{4} [0-9]{1,4} [AP]M - )([a-zA-Z_]+\.java)$~\4~g' | ( read javaFileName; echo $javaFileName)
+            studentName=$( echo $file | sed -E 's~(^[a-zA-Z]+\/\/[0-9]+-[0-9]+ - )(.+ .+)( - [a-zA-Z]{3} [0-9]{1,2}, [0-9]{4} [0-9]{1,4} [AP]M - [a-zA-Z_]+\.java)$~\2~g')
+            echo $studentName
+            javaFileName=$(echo $file | sed -E 's~(^[a-zA-Z]+\/\/[0-9]+-[0-9]+ - )(.+ .+)( - [a-zA-Z]{3} [0-9]{1,2}, [0-9]{4} [0-9]{1,4} [AP]M - )([a-zA-Z_]+\.java)$~\4~g')
+            echo $javaFileName
             # CLASSPATH=./
         else
             ### skip processing
