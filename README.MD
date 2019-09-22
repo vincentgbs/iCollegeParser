@@ -12,3 +12,9 @@ You can run the script using:
 ```bash
 ./parsingScript.sh zipfile/
 ```
+
+iCollege download format:
+![image](https://raw.githubusercontent.com/vincentgbs/iCollegeParser/master/zipfileraw.png)
+
+Script result format:
+![image](https://raw.githubusercontent.com/vincentgbs/iCollegeParser/master/formatted.png)
