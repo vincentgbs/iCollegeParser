@@ -19,6 +19,12 @@ then
                 studentName=$(echo $studentName | tr -d " \t\n\r") ### remove spaces
                 mkdir -p "$1/$studentName"
                 mv "$file" "$1/$studentName/$javaFileName"
+                # run the test within the folder
+                cd "$1/$studentName"
+                javac ./*.java
+                javac -d ./ "../../tests/$2/${2}Test.java"
+                java "${2}Test" $3
+                cd ../../
             else
                 echo "Error: $studentName is not a valid name"
             fi
