@@ -18,3 +18,7 @@ iCollege download format:
 
 Script result format:
 ![image](https://raw.githubusercontent.com/vincentgbs/iCollegeParser/master/formatted.png)
+
+
+
+The "automated grader" feature is lacking, it only verified about 10% of the homework submissions to be correct. However, the script still has the advantage of compiling most of the assignments, so you can just cd between directories (by student name) and java _____Client to test the functionality faster.

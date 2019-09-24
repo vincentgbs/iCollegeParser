@@ -6,7 +6,7 @@ public class TriangleTest {
         boolean correct = true;
         TriangleClient test = new TriangleClient();
         Triangle triangle = new Triangle(2, 3, 4);
-        if (!triangle.toString().equals("side1: 2, side2: 3, side3: 4")) {
+        if (!triangle.toString().equals("{side1: 2, side2: 3, side3: 4}")) {
             // correct = false;
         }
         if (triangle.isEquilateral()) {
