@@ -21,9 +21,11 @@ then
                 mv "$file" "$1/$studentName/$javaFileName"
                 # run the test within the folder
                 cd "$1/$studentName"
+                # remove package names
                 javac ./*.java
-                javac -d ./ "../../tests/$2/${2}Test.java"
-                java "${2}Test" $3
+                ### Automate the test class
+                # javac -d ./ "../../tests/$2/${2}Test.java"
+                # java "${2}Test" $3
                 cd ../../
             else
                 echo "Error: $studentName is not a valid name"
