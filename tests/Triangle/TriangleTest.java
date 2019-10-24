@@ -1,3 +1,5 @@
+/* THIS IS JUST AN EXAMPLE FILE */
+
 import java.io.File;
 
 public class TriangleTest {
@@ -136,7 +138,6 @@ public class TriangleTest {
             tmp.createNewFile();
         }
         /* else: Requires individual analysis of code */
-
     }
 
 }

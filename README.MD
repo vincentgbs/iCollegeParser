@@ -12,6 +12,11 @@ You can run the script using:
 ```bash
 ./parsingScript.sh zipfile/
 ```
+If you want to automated grading, you can write Test Cases. You will need to comment out the test case code in the script. After the script runs with those 3 arguments, the students directories that passed all of your test cases will have a file marking them as correct. The other directories will still require manual checking.
+The "randomstring" variable is the file that is created within the directory if the code passed all of the tests. This is so that students can't put a file in the folder marking it correct.
+```bash
+./parsingScript.sh zipfile Triangle randomstring
+```
 
 iCollege download format:
 ![image](https://raw.githubusercontent.com/vincentgbs/iCollegeParser/master/zipfileraw.png)
