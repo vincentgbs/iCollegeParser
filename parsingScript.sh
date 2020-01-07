@@ -22,7 +22,7 @@ then
                 # run the test within the folder
                 cd "$1/$studentName"
                 # remove package names
-                sed -i '' '/package/d' "$1/$studentName/$javaFileName"
+                sed -i '' '/package/d' "$javaFileName"
                 # compile files
                 javac ./*.java
                 ### Automate test classes
